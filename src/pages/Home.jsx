@@ -94,7 +94,7 @@ export default function Home() {
               <a href="#projects" className="py-2 border-b" onClick={() => setMenuOpen(false)}>Projects</a>
               <a href="#skills" className="py-2 border-b" onClick={() => setMenuOpen(false)}>Skills</a>
               <a href="#contact" className="py-2 border-b" onClick={() => setMenuOpen(false)}>Contact</a>
-              <a href="/Dhaneesh_J_MERN_Developer.pdf" className="py-2 border-b" onClick={() => setMenuOpen(false)}>Resume</a>
+<a href="/Dhaneesh_V_Jayakumaran_CV_Resume.pdf" className="py-2 border-b" onClick={() => setMenuOpen(false)}>Resume</a>
               <a href="/profile" className="py-2" onClick={() => setMenuOpen(false)}>Profile</a>
             </div>
           </div>
