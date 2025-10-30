@@ -72,7 +72,7 @@ export default function Home() {
             <a href="#skills" className="text-sm px-3 py-2 hover:bg-gray-100 rounded">Skills</a>
             <a href="#contact" className="text-sm px-3 py-2 hover:bg-gray-100 rounded">Contact</a>
             <a href="/Dhaneesh_V_Jayakumaran_CV_Resume.pdf"
-  download="Dhaneesh_J_MERN_Developer.pdf" className="ml-3 inline-flex items-center text-sm px-3 py-2 border rounded hover:bg-gray-50">Resume</a>
+  download="Dhaneesh_v_J_MERN_Developer.pdf" className="ml-3 inline-flex items-center text-sm px-3 py-2 border rounded hover:bg-gray-50">Resume</a>
           </nav>
 
 
@@ -103,6 +103,12 @@ download="Dhaneesh_V_Jayakumaran_CV_Resume.pdf" className="py-2 border-b" onClic
       </header>
 
       {/* Hero */}
+            <img
+          src="/dhaneesh.jpeg" // replace with your image path (e.g., /public/profile.jpg)
+          alt="Dhaneesh V Jayakumaran"
+          className="w-40 h-40 rounded-full mx-auto mb-4 shadow-md object-cover mt-20"
+        />
+
       <section className="text-center py-20 bg-gradient-to-b from-gray-50 to-white">
         <h2 className="text-4xl font-bold mb-4">Hi, I'm Dhaneesh 👋</h2>
         <p className="text-lg text-gray-600 mb-6">
