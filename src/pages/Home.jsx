@@ -19,6 +19,7 @@ export default function Home() {
     const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'YOUR_TEMPLATE_ID';
     const userID = import.meta.env.VITE_EMAILJS_USER_ID || 'YOUR_USER_ID';
     console.log("EmailJS IDs:", serviceID, templateID, userID);
+/*
 useEffect(() => {
   AOS.init({
     duration: 1000, // Animation speed
@@ -26,7 +27,7 @@ useEffect(() => {
     offset: 100,    // Trigger distance from viewport
   });
 }, []);
-
+*/
 
     emailjs.sendForm(serviceID, templateID, formRef.current, userID)
       .then((result) => {
