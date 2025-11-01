@@ -103,12 +103,13 @@ download="Dhaneesh_V_Jayakumaran_CV_Resume.pdf" className="py-2 border-b" onClic
       </header>
 
       {/* Hero */}
-            <img
+
+            <img 
           src="/dhaneesh.jpeg" // replace with your image path (e.g., /public/profile.jpg)
           alt="Dhaneesh V Jayakumaran"
-          className="w-40 h-40 rounded-full mx-auto mb-4 shadow-md object-cover mt-20"
+          className="w-45 h-45 rounded-full mx-auto mb-4 shadow-md object-cover mt-20 bg-blue-600 p-1 hover:scale-105 transition-transform duration-300 cursor-pointer"
+          onClick={goProfile}
         />
-
       <section className="text-center py-20 bg-gradient-to-b from-gray-50 to-white">
         <h2 className="text-4xl font-bold mb-4">Hi, I'm Dhaneesh 👋</h2>
         <p className="text-lg text-gray-600 mb-6">
@@ -126,7 +127,7 @@ download="Dhaneesh_V_Jayakumaran_CV_Resume.pdf" className="py-2 border-b" onClic
           <h2 className="text-2xl font-bold mb-10 text-center">Projects</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {projects.map((p, i) => (
-              <div key={i} className="border rounded-xl shadow-sm p-6 hover:shadow-md transition">
+              <div key={i} className="border rounded-xl shadow-sm p-6 hover:shadow-md transition hover:scale-[1.02] duration-300 ">
                 <h3 className="text-lg font-semibold mb-2">{p.title}</h3>
                 <p className="text-gray-600 mb-4">{p.desc}</p>
                 <div className="flex flex-wrap gap-2 mb-4">

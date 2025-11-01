@@ -10,7 +10,7 @@ export default function Profile() {
         <img
           src="/dhaneesh.jpeg" // replace with your image path (e.g., /public/profile.jpg)
           alt="Dhaneesh V Jayakumaran"
-          className="w-28 h-28 rounded-full mx-auto mb-4 shadow-md object-cover"
+          className="w-35 h-35 rounded-full mx-auto mb-4 shadow-md object-cover bg-blue-600 p-1 hover:scale-105 transition-transform duration-300 cursor-pointer"
         />
 
         {/* Name and Role */}
@@ -85,7 +85,7 @@ deliver seamless and intuitive user experiences
       <section id="experience" className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-2xl font-bold mb-6 text-center">Professional Experience</h2>
-          <div className="bg-white p-6 rounded-lg shadow">
+          <div className="bg-white p-6 rounded-lg shadow hover:shadow-md transition mb-6 hover:scale-[1.02] duration-300">
             <h3 className="font-semibold text-lg">MERN STACK Internship Trainee – Rogersoft Technologies</h3>
             <p className="text-sm text-gray-500 mb-3">Dec 2024 – Apr 2025 | Kochi, India</p>
             <ul className="list-disc list-inside text-gray-700 space-y-2">
