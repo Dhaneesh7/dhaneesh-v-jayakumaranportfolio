@@ -1,6 +1,9 @@
 import React, { useRef, useState } from 'react';
 import { Mail, Linkedin, ExternalLink, Menu, X } from 'lucide-react';
 import emailjs from 'emailjs-com';
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 export default function Home() {
   const formRef = useRef(null);
@@ -16,6 +19,13 @@ export default function Home() {
     const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'YOUR_TEMPLATE_ID';
     const userID = import.meta.env.VITE_EMAILJS_USER_ID || 'YOUR_USER_ID';
     console.log("EmailJS IDs:", serviceID, templateID, userID);
+useEffect(() => {
+  AOS.init({
+    duration: 1000, // Animation speed
+    once: true,     // Animate only once
+    offset: 100,    // Trigger distance from viewport
+  });
+}, []);
 
 
     emailjs.sendForm(serviceID, templateID, formRef.current, userID)
@@ -110,24 +120,25 @@ download="Dhaneesh_V_Jayakumaran_CV_Resume.pdf" className="py-2 border-b" onClic
           className="w-45 h-45 rounded-full mx-auto mb-4 shadow-md object-cover mt-20 bg-blue-600 p-1 hover:scale-105 transition-transform duration-300 cursor-pointer"
           onClick={goProfile}
         />
-      <section className="text-center py-20 bg-gradient-to-b from-gray-50 to-white">
+      <section className="text-center py-20 bg-gradient-to-b from-gray-50 to-white"   data-aos="fade-down">
         <h2 className="text-4xl font-bold mb-4">Hi, I'm Dhaneesh 👋</h2>
-        <p className="text-lg text-gray-600 mb-6">
+        <p className="text-lg text-gray-600 mb-6" data-aos="fade-up" data-aos-delay="200">
           MERN Stack Developer passionate about building responsive and scalable web applications.
         </p>
-        <div className="space-x-4">
+        <div className="space-x-4"  data-aos="zoom-in" data-aos-delay="400">
           <a href="#projects" className="bg-indigo-600 text-white px-6 py-2 rounded hover:bg-indigo-700">View Projects</a>
           <a href="#contact" className="border border-indigo-600 text-indigo-600 px-6 py-2 rounded hover:bg-indigo-50">Contact Me</a>
         </div>
       </section>
 
       {/* Projects */}
-      <section id="projects" className="py-20 bg-white">
+      <section id="projects" className="py-20 bg-white" data-aos="fade-up">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-2xl font-bold mb-10 text-center">Projects</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {projects.map((p, i) => (
-              <div key={i} className="border rounded-xl shadow-sm p-6 hover:shadow-md transition hover:scale-[1.02] duration-300 ">
+              <div key={i} className="border rounded-xl shadow-sm p-6 hover:shadow-md transition-transform hover:scale-105 duration-300 " 
+          >
                 <h3 className="text-lg font-semibold mb-2">{p.title}</h3>
                 <p className="text-gray-600 mb-4">{p.desc}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
@@ -150,10 +161,10 @@ download="Dhaneesh_V_Jayakumaran_CV_Resume.pdf" className="py-2 border-b" onClic
       </section>
 
       {/* Skills */}
-      <section id="skills" className="py-20 bg-gray-50">
+      <section id="skills" className="py-20 bg-gray-50" data-aos="fade-right">
         <div className="max-w-5xl mx-auto px-6 text-center">
-          <h2 className="text-2xl font-bold mb-8">Skills</h2>
-          <div className="flex flex-wrap justify-center gap-3">
+          <h2 className="text-2xl font-bold mb-8">Skills</h2> 
+          <div className="flex flex-wrap justify-center gap-3"data-aos="fade-up" data-aos-delay="200">
             {['React.js', 'Node.js', 'Express.js', 'MongoDB', 'JavaScript (ES6+)', 'HTML5', 'CSS3', 'Tailwind CSS', 'Redux Toolkit', 'Git & GitHub'].map((skill, i) => (
               <span key={i} className="bg-white shadow px-3 py-2 rounded text-sm text-gray-700">{skill}</span>
             ))}
@@ -162,7 +173,7 @@ download="Dhaneesh_V_Jayakumaran_CV_Resume.pdf" className="py-2 border-b" onClic
       </section>
 
       {/* Contact */}
-      <section id="contact" className="py-20 bg-white">
+      <section id="contact" className="py-20 bg-white" data-aos="fade-left">
         <div className="max-w-md mx-auto px-6">
           <h2 className="text-2xl font-bold mb-8 text-center">Contact Me</h2>
           <form ref={formRef} onSubmit={handleSend} className="space-y-4 bg-gray-50 p-6 rounded-lg shadow">
